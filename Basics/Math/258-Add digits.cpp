@@ -1,21 +1,17 @@
 class Solution {
 public:
     int addDigits(int num) {
-        if((num/10)==0) return num; //if single digit
+        if((num/10)==0) return num; //if single digit then return
 
-        int temp = num, digits = 0, sum=0;
-
-        while(temp > 0){ //count num of digits
-            digits++;
-            temp /= 10;
+        int sum=0;
+        while(num>0){
+            sum += num%10; //unit digit
+            num /= 10; //left digits
         }
 
-        for(int i=0;i<digits;i++){
-            int div = pow(10,digits-i-1);
-            sum += (num/div); //sum of digits
-            num = num%div;
-        }
-        int ans = addDigits(sum); //returns single digit
-        return ans;
+        return addDigits(sum); //returns single digit
+
+        //one line solution is::
+        // return (1+(num-1)%9);
     }
 };
