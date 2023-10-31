@@ -1,3 +1,6 @@
+
+//FOR all postive values in array
+
 //OPTIMAL solution using two pointers
 int longestSubarrayWithSumK(vector<int> a, long long k){
     int right=0, left=0;
