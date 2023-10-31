@@ -1,7 +1,5 @@
 
-//FOR all postive values in array
-
-//OPTIMAL solution using two pointers
+//OPTIMAL solution using two pointers (NOTE: will work only for positive nums)
 int longestSubarrayWithSumK(vector<int> a, long long k){
     int right=0, left=0;
     long long sum=0;
@@ -25,7 +23,7 @@ int longestSubarrayWithSumK(vector<int> a, long long k){
 
 
 
-//BETTER Solution using Hashing
+//BETTER Solution using Hashing (can be used for negative values as well)
 int longestSubarrayWithSumK(vector<int> a, long long k){
     int maxlen = 0;
     long long prefixsum = 0;
