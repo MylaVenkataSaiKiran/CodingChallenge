@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<algorithm>
 
 using namespace std;
 
@@ -35,6 +36,10 @@ int main(){
 
     swap(s1,s); //swapping
     cout<<"string s after swaping with s1: "<<s<<endl;
+
+    //sorting
+    sort(s1.begin(),s1.end());
+    cout<<"After sorting: "<<s1<<endl;
 
     if(s.compare(s1)==0) cout<<"both are equal"<<endl; //comparision of strings
     else if(s.compare(s1) > 0) cout<<"s1 is lexicographically greater than s"<<endl;
