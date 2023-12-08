@@ -10,6 +10,20 @@
  */
 class Solution {
 public:
+    //solution 2 : Recursion
+    ListNode* reverseList(ListNode* head) {
+        //edge cases:
+        if(head == NULL || head->next == NULL){
+            return head;
+        }
+
+        ListNode* newhead = reverseList(head->next);
+        head->next->next = head;
+        head->next = NULL;
+        return newhead;
+    }
+
+    //Solution 1: Iteration
     ListNode* reverseList(ListNode* head) {
         //edge cases:
         if(head == NULL || head->next == NULL){
