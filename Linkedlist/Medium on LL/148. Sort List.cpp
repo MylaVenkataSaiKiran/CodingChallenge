@@ -11,7 +11,7 @@
  
 class Solution {
 public:
-    //MERGESORT O(N)-time and O(1)-space
+    //MERGESORT O(NlogN)-time and O(1)-space
     ListNode* merge(ListNode* first, ListNode* second){
         ListNode* ans = new ListNode();
         ListNode* newhead = ans;
