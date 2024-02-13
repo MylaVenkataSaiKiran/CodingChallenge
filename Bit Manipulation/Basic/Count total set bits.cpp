@@ -1,4 +1,4 @@
-//oPTIMAL SOL - Bit Manipulation 
+//OPTIMAL SOL - Bit Manipulation 
 int countSetBits(int N){
     int d = 2, ans=0, x=N;
     while(x>0){
@@ -16,6 +16,21 @@ int countSetBits(int N)
     int ans=0;
     for(int i=1; i<=N; i++){
         ans += __builtin_popcount(i);
+    }
+    return ans;
+}
+
+//O(NlogN)-time
+int countbits(int X){
+    if(X <= 0) return 0;
+
+    return (X%2==0 ? 0:1) + countbits(X/2);
+}
+
+int countSetBits(int N){
+    int ans = 0;
+    for(int i=1; i<=N; i++){
+        ans += countbits(i);
     }
     return ans;
 }
